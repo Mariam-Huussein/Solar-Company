@@ -57,12 +57,6 @@ ul{
     cursor: pointer;
 }
 
-.container-hero-txt {
-    height: 95%;
-    align-content: center;
-    text-align: center;
-}
-
 nav{
     height: fit-content;
     width: 100%;
@@ -70,7 +64,7 @@ nav{
     background-color: var(--primary-color);
     color: var(--light-font-color);
     border-bottom: 1px solid rgb(225, 225, 225, 0.24);
-    position: sticky;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-evenly;
@@ -149,19 +143,25 @@ nav{
     font-weight: 600;
 }
 
-.hero{
+.hero {
     width: 100%;
     height: 100vh;
+    background-image: url(../images/banner-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-container{
     width: 100%;
-    height: 90%;
-    background-image: url('../images/banner-bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
 } 
+
+.container-hero-txt {
+    height: 95%;
+    align-content: center;
+    text-align: center;
+}
 
 .hero-content {
     width: 90%;
@@ -383,7 +383,7 @@ nav{
     height: fit-content;
 }
 
-.kits-section{
+.kits{
     width:100%;
     height:fit-content;
     margin-bottom: 80px;
@@ -398,7 +398,7 @@ nav{
 .kits-cards{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     justify-items: center;
     align-items: center;
     row-gap: 20px;
@@ -1208,7 +1208,7 @@ footer {
 
     .kits-card {
         height: 428px;
-        width: 290px;
+        width: 280px;
     }
 }
 
@@ -1248,6 +1248,16 @@ footer {
         padding: 20px;
     }
 
+    .kits-cards{
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    
+    .kits-card {
+        height: 428px;
+        width: 280px;
+    }
+
 }
 
 
@@ -1259,5 +1269,16 @@ footer {
     .about-details-img .abt-img-flow {
         height: 30%;
         width: 54%;
+    }
+
+    
+    .kits-cards{
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    
+    .kits-card {
+        height: fit-content;
+        width: 240px;
     }
 }
